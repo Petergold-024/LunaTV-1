@@ -4,6 +4,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 import { Suspense } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
@@ -160,6 +161,7 @@ export default async function RootLayout({
             </GlobalCacheProvider>
           </QueryProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
